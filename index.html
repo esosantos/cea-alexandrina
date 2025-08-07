@@ -2,122 +2,220 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CEA-Alexandrina</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CEA-Alexandrina</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- FontAwesome -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    rel="stylesheet"
-  />
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
-  <!-- Seu CSS -->
-  <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Seu CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg custom-navbar" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#home">
-        <img src="assets/img/logotipo.png" alt="CEA-Alexandrina" class="logo-img me-2" />
-      </a>
+    <!-- Navigation Section -->
+    <nav class="navbar navbar-expand-lg custom-navbar" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="assets/img/logotipo.png" alt="CEA-Alexandrina" class="logo-img me-2" />
+            </a>
 
-      <button
-        class="navbar-toggler collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+            </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link custom-link" href="#home">Início</a></li>
-          <li class="nav-item"><a class="nav-link custom-link" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link custom-link" href="#programas">Programas</a></li>
-          <li class="nav-item"><a class="nav-link custom-link" href="#diferenciais">Diferenciais</a></li>
-          <li class="nav-item"><a class="nav-link custom-link" href="#depoimentos">Depoimentos</a></li>
-          <li class="nav-item"><a class="nav-link custom-link" href="#galeria">Galeria</a></li>
-          <li class="nav-item"><a class="nav-link custom-link" href="#contato">Contato</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero-section position-relative overflow-hidden">
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <div class="row align-items-center min-vh-100 py-5">
-        <div class="col-lg-6 text-dark text-center text-lg-start">
-          <div class="hero-content">
-            <h1 class="hero-title fw-bold mb-4">
-              <span class="d-block display-6 text-success">Desde 1992</span>
-              <span class="d-block display-4">Cultivando o Futuro</span>
-              <span class="d-block display-5">das <span class="text-success">crianças</span></span>
-              <span class="d-block display-6">em <strong>Cosme de Farias</strong></span>
-            </h1>
-
-            <p class="hero-subtitle mb-4">
-              Nossa escola é o alicerce onde o conhecimento floresce e mentes brilhantes se preparam para uma jornada de
-              sucesso.
-            </p>
-
-            <div class="d-flex flex-column flex-md-row gap-3">
-              <a href="#programas" class="btn btn-success btn-lg w-100 w-md-auto">Conheça Nossos Programas</a>
-              <a href="#contato" class="btn btn-outline-success btn-lg w-100 w-md-auto">Agende uma Visita</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link custom-link" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="#programas">Programas</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="#diferenciais">Diferenciais</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="#depoimentos">Depoimentos</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="#galeria">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="#contato">Contato</a></li>
+                </ul>
             </div>
-          </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section position-relative overflow-hidden">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100 py-5">
+                <div class="col-lg-6 text-dark text-center text-lg-start">
+                    <div class="hero-content">
+                        <h1 class="hero-title fw-bold mb-4">
+                            <span class="d-block display-6 text-success">Desde 1992</span>
+                            <span class="d-block display-4">Cultivando o Futuro</span>
+                            <span class="d-block display-5">das <span class="text-success">crianças</span></span>
+                            <span class="d-block display-6">em <strong>Cosme de Farias</strong></span>
+                        </h1>
+
+                        <p class="hero-subtitle mb-4">
+                            Nossa escola é o alicerce onde o conhecimento floresce e mentes brilhantes se preparam para
+                            uma jornada de
+                            sucesso.
+                        </p>
+
+                        <div class="d-flex flex-column flex-md-row gap-3">
+                            <a href="#programas" class="btn btn-success btn-lg w-100 w-md-auto">Conheça Nossos
+                                Programas</a>
+                            <a href="#contato" class="btn btn-outline-success btn-lg w-100 w-md-auto">Agende uma
+                                Visita</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                    <div class="floating-image-wrapper mx-auto">
+                        <img src="assets/img/img02.jpg" alt="Estudantes felizes"
+                            class="img-fluid rounded-4 shadow floating-img" />
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="col-lg-6 text-center mt-5 mt-lg-0">
-          <div class="floating-image-wrapper mx-auto">
-            <img
-              src="assets/img/img01.jpg"
-              alt="Estudantes felizes"
-              class="img-fluid rounded-4 shadow floating-img"
-            />
-          </div>
+        <!-- Scroll indicator para ir até #sobre -->
+        <a href="#sobre" class="scroll-indicator text-success text-decoration-none text-center d-block"
+            title="Ir para seção Sobre">
+            <i class="fas fa-chevron-down fa-2x"></i>
+        </a>
+    </section>
+
+
+    <!-- About Section -->
+    <section class="sobre-alexandrina" id="sobre">
+        <div class="container-fluid p-0">
+            <!-- Título Principal -->
+            <div class="row">
+                <div class="col-12 text-center py-4 bg-success">
+                    <h1 class="alexandrina-title">Alexandrina</h1>
+                </div>
+            </div>
+
+            <!-- Conteúdo em Duas Colunas -->
+            <div class="row g-0"> <!-- Remove gutters -->
+                <!-- Coluna da Foto (Esquerda - Verde) -->
+                <div class="col-lg-6 bg-success p-5 d-flex align-items-center">
+                    <div class="alexandrina-photo-card shadow-lg-white w-100">
+                        <!-- Adicionei a classe shadow-lg-white -->
+                        <img src="assets/img/irmaes.png" alt="Alexandrina" class="img-fluid rounded-3">
+                        <!-- Legenda -->
+                        <div class="photo-caption p-3 text-center">
+                            <div class="caption-line">Irmãs Maria e Clara Silva</div>
+                            <div class="caption-line">Fundadoras da Instituição</div>
+                            <div class="caption-line">1995 - Até os dias atuais</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna do Texto (Direita - Branca) -->
+                <div class="col-lg-6 bg-white p-5">
+                    <div class="alexandrina-content">
+                        <h2 class="content-subtitle mb-4 text-dark">Nossa História</h2>
+
+                        <div class="content-paragraphs">
+                            <p class="text-dark text-justify text-md-justify">Fundada em 1995, a Alexandrina surgiu como
+                                um sonho de
+                                transformação educacional. Nossa jornada começou em uma pequena sala, com apenas 20
+                                alunos e a firme convicção de que a educação poderia mudar realidades. Hoje, após quase
+                                três décadas, mantemos o mesmo compromisso com a excelência, mas com uma estrutura que
+                                nos permite impactar milhares de vidas.</p>
+
+                            <p class="text-dark text-justify text-md-justify">Nossa metodologia é baseada em três
+                                pilares fundamentais:
+                                acolhimento, inovação e excelência. Acreditamos que cada aluno é único e merece um
+                                acompanhamento personalizado que respeite seu ritmo e potencial. Nossos educadores são
+                                cuidadosamente selecionados não apenas por sua competência técnica, mas por sua
+                                capacidade de inspirar e formar cidadãos conscientes.</p>
+
+                            <p class="text-dark text-justify text-md-justify">O ambiente da Alexandrina foi projetado
+                                para estimular a
+                                criatividade e o pensamento crítico. Nossas salas de aula são espaços dinâmicos,
+                                equipados com tecnologia de ponta, mas sem perder a essência humanista que sempre nos
+                                guiou. A relação entre professores, alunos e famílias é o alicerce de nosso trabalho,
+                                criando uma comunidade educativa forte e unida.</p>
+                            <p class="text-dark text-justify text-md-justify">O ambiente da Alexandrina foi projetado
+                                para estimular a
+                                criatividade e o pensamento crítico. Nossas salas de aula são espaços dinâmicos,
+                                equipados com tecnologia de ponta, mas sem perder a essência humanista que sempre nos
+                                guiou. A relação entre professores, alunos e famílias é o alicerce de nosso trabalho,
+                                criando uma comunidade educativa forte e unida.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </section>
+    <!-- Programas Section -->
+    <section id="programas" class="py-5 ">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title mt-4">Caminhos para o Sucesso</h2>
+                <p class="section-subtitle">Programas educacionais que preparam seus filhos para um futuro brilhante</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 class="program-title">Ensino Fundamental 1</h3>
+                        <h4 class="program-subtitle">Despertando a Curiosidade e Construindo Bases Sólidas</h4>
+                        <p class="program-text">Nosso programa para o Ensino Fundamental foca no desenvolvimento
+                            integral da criança, estimulando a descoberta e o amor pelo aprendizado. Com atividades
+                            lúdicas e projetos interdisciplinares, garantimos uma base sólida em todas as áreas do
+                            conhecimento.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check text-primary me-2"></i>Metodologia lúdica e interativa</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Projetos interdisciplinares</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Desenvolvimento socioemocional</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Acompanhamento individualizado</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="program-title">Ensino Fundamental 2</h3>
+                        <h4 class="program-subtitle">Preparando Líderes e Inovadores para o Amanhã</h4>
+                        <p class="program-text">No Ensino Médio, oferecemos um currículo desafiador e atualizado, que
+                            prepara os alunos para os exames vestibulares mais concorridos e para os desafios da vida
+                            universitária e profissional.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check text-primary me-2"></i>Preparação Ensino Médio</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Projetos de pesquisa</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Orientação vocacional</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Simulados e monitorias</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Scroll indicator para ir até #sobre -->
-    <a
-      href="#sobre"
-      class="scroll-indicator text-success text-decoration-none text-center d-block"
-      title="Ir para seção Sobre"
-    >
-      <i class="fas fa-chevron-down fa-2x"></i>
-    </a>
-  </section>
 
-  <!-- Seção Sobre (exemplo) -->
-  <section id="sobre" style="height: 100vh; background: #cde5d1; padding: 2rem;">
-    <h2>Seção Sobre</h2>
-    <p>Conteúdo da seção sobre...</p>
-  </section>
 
-  <!-- Botão voltar ao topo -->
-  <button id="backToTop" class="back-to-top" title="Voltar ao topo">
-    <i class="fas fa-chevron-up"></i>
-  </button>
+    <!-- Botão voltar ao topo -->
+    <button id="backToTop" class="back-to-top" title="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Seu JS -->
-  <script src="assets/js/main.js"></script>
+    <!-- Seu JS -->
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>

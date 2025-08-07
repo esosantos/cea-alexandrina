@@ -1,214 +1,548 @@
 /* Variáveis de cores */
 :root {
-  --green-primary: #198754;
-  --green-leaf: #5d9e5f;
+    --green-primary: #198754;
+    --green-leaf: #5d9e5f;
+    --white-primary: #f8f9f7;
+    --black-primary: #050606;
 }
 
-/* Reset básico */
+/* ============================================= */
+/*               RESET CSS BÁSICO                */
+/* ============================================= */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
 }
+
+/* Remove estilos padrão de listas */
+ol,
+ul {
+    list-style: none;
+}
+
+/* Remove decoração padrão de links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove estilos padrão de elementos de formulário */
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* Remove estilos padrão de botões */
+button {
+    cursor: pointer;
+}
+
+/* Remove espaços abaixo de imagens */
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilização geral */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.5;
+    background-color: var(--white-primary);
+    color: var(--black-primary);
+}
+
+/* ============================================= */
+/*        RESET E AJUSTES PARA BOOTSTRAP         */
+/* ============================================= */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0 0 1rem 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    padding: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+select,
+textarea {
+    width: 100%;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    box-shadow: none;
+    appearance: none;
+}
+
+.btn:focus,
+.btn:active {
+    box-shadow: none !important;
+}
+.btn-close:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.nav-link {
+    text-decoration: none !important;
+}
+
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 0;
+    margin: 0;
+}
+
+/* ============================================= */
+/*                COMPONENTES CUSTOM             */
+/* ============================================= */
 
 /* Navbar customizada */
 .custom-navbar {
-  background-color: var(--green-primary);
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.15);
+    background-color: var(--green-primary);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.15);
 }
+
 .logo-img {
-  height: 60px;      /* Altura fixa */
-  width: auto;       /* Largura proporcional */
-  max-width: 100%;   /* Não ultrapassa o container */
-  transition: transform 0.3s ease;
+    height: 60px;
+    width: auto;
+    max-width: 100%;
+    transition: transform 0.3s ease;
 }
 
 .custom-navbar .nav-link {
-  color: white;
-  font-weight: 500;
-  font-size: 1.15rem;
-  padding: 14px 20px;
-  border-radius: 8px;
-  transition: all 0.25s ease;
+    color: white;
+    font-weight: 500;
+    font-size: 1.15rem;
+    padding: 14px 20px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
 }
 
 .custom-navbar .nav-link:hover,
 .custom-navbar .nav-link:focus {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: white;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
 }
 
 .custom-navbar .nav-link.active {
-  background-color: rgba(255, 255, 255, 0.15);
-  font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: 600;
 }
 
 /* Botão hamburguer personalizado */
 .navbar-toggler {
-  border: none;
-  background: transparent;
-  padding: 0;
+    border: none;
+    background: transparent;
+    padding: 0;
 }
 
 .icon-bar {
-  width: 22px;
-  height: 2px;
-  background-color: white;
-  display: block;
-  margin-top: 4px;
-  transition: all 0.3s ease;
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin-top: 4px;
+    transition: all 0.3s ease;
 }
 
 .navbar-toggler:not(.collapsed) .top-bar {
-  transform: rotate(45deg);
-  transform-origin: 10% 10%;
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
 }
 
 .navbar-toggler:not(.collapsed) .middle-bar {
-  opacity: 0;
+    opacity: 0;
 }
 
 .navbar-toggler:not(.collapsed) .bottom-bar {
-  transform: rotate(-45deg);
-  transform-origin: 10% 90%;
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
 }
+.navbar-toggler:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 
 /* Hero Section */
 .hero-section {
-  position: relative; /* importante para posicionamento absoluto do botão */
-  background: var(--white);
-
+    position: relative;
+    background: var(--white);
 }
 
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .hero-section .container,
 .hero-section .row,
 .hero-section .hero-content {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-title {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 
 .hero-subtitle {
-  font-size: 1.125rem;
+    font-size: 1.125rem;
 }
 
 /* Animação imagem flutuante */
 .floating-img {
-  animation: floatY 4s ease-in-out infinite;
+    animation: floatY 4s ease-in-out infinite;
 }
 
 @keyframes floatY {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
-/* Garante que o botão descer está relativo à hero-section */
-.hero-section {
-  position: relative; /* se já tiver, tudo certo */
-}
-
-/* Botão descer centralizado na base */
+/* Botão descer */
 .scroll-indicator {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--green-primary);
-  font-size: 2.5rem;
-  cursor: pointer;
-  z-index: 10;
-  transition: color 0.3s ease;
-}
-
-/* Ajuste para telas pequenas para subir o botão e evitar sobreposição */
-@media (max-width: 767.98px) {
-  .scroll-indicator {
-    bottom: 60px; /* sobe o botão para não ficar sobre a imagem */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--green-primary);
     font-size: 2rem;
-  }
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s ease;
 }
 
+@media (max-width: 767.98px) {
+    .scroll-indicator {
+        bottom: 60px;
+        font-size: 2rem;
+    }
+}
 
+/* Botão voltar ao topo */
 .back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px; /* botão no canto direito */
-  display: none; /* oculto por padrão */
-  width: 48px;    /* largura fixa */
-  height: 48px;   /* altura fixa igual para ser círculo */
-  background-color: var(--green-primary);
-  color: white;
-  border: none;
-  border-radius: 50%; /* deixa circular */
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 9999;
-
-  display: flex;              /* flex para centralizar */
-  align-items: center;
-  justify-content: center;
-
-  transition: background-color 0.3s ease, transform 0.3s ease;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 48px;
+    height: 48px;
+    background-color: var(--green-primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .back-to-top:hover {
-  background-color: var(--green-leaf);
-  transform: scale(1.1);
+    background-color: var(--green-leaf);
+    transform: scale(1.1);
 }
 
-/* Responsividade para telas pequenas */
-@media (max-width: 576px) {
-  .back-to-top {
-    width: 40px;
-    height: 40px;
-    font-size: 1.25rem;
-    bottom: 15px;
-    right: 15px;
-  }
+/* Seção Sobre */
+.sobre-alexandrina {
+    position: relative;
+    overflow: hidden;
 }
+
+.alexandrina-title {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+.bg-success {
+    background-color: var(--green-primary) !important;
+}
+
+.alexandrina-photo-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.photo-caption {
+    background: var(--white-primary);
+    color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    text-shadow: var(--green-primary);
+}
+
+.shadow-lg-white {
+    box-shadow:
+        0 10px 20px rgba(255, 255, 255, 0.1),
+        0 6px 6px rgba(255, 255, 255, 0.1),
+        0 0 0 2px rgba(255, 255, 255, 0.9) !important;
+    transition: all 0.3s ease;
+}
+
+.caption-line {
+    font-family: 'Montserrat', sans-serif;
+    margin: 3px 0;
+}
+
+.caption-line:first-child {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.alexandrina-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.content-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #28a745;
+}
+
+.content-paragraphs p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    color: var(--black-primary);
+}
+
+/* Section Programas */
+#programas {
+    background-color:  #e5e5e5; 
+}
+
+/* Título principal */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1a7c4d; /* Verde institucional */
+    margin-bottom: 0.5rem;
+}
+
+.section-title .text-primary {
+    color: #198754 !important; /* Verde Bootstrap */
+}
+
+/* Subtítulo */
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* Cartão */
+.program-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efeito hover */
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícone do topo */
+.program-icon {
+    font-size: 2.5rem;
+    color: #198754;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.program-card:hover .program-icon {
+    transform: scale(1.1) rotate(-2deg);
+}
+
+/* Título e subtítulo */
+.program-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a7c4d;
+    margin-bottom: 0.5rem;
+}
+
+.program-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Texto do programa */
+.program-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+
+/* Lista de features */
+.program-features {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.program-features li {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.program-features i {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
 
 
 /* Responsividade */
-@media (max-width: 767.98px) {
-  .hero-title {
-    font-size: 2rem;
-  }
+@media (max-width: 992px) {
+    .alexandrina-title {
+        font-size: 3rem;
+    }
 
-  .hero-subtitle {
-    font-size: 1rem;
-  }
+    .content-subtitle {
+        font-size: 1.75rem;
+    }
+
+    .alexandrina-content,
+    .alexandrina-photo-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .alexandrina-title {
+        font-size: 2.5rem;
+    }
+
+    .bg-success,
+    .bg-white {
+        padding: 2rem !important;
+    }
+
+    .content-paragraphs p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
 }
 
 @media (min-width: 992px) {
-  .custom-navbar .nav-link {
-    font-size: 1.2rem;
-    padding: 16px 24px;
-  }
+    .custom-navbar .nav-link {
+        font-size: 1.2rem;
+        padding: 16px 24px;
+    }
 }
