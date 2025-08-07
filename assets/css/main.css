@@ -1,197 +1,92 @@
-/* ============================================= */
-/*               RESET BÁSICO                    */
-/* ============================================= */
+/* Variáveis de cores */
 :root {
-    /* Cores principais - Verde base */
-    --green-primary: #198754;
-    ;
-    /* Verde padrão/vivo */
-    --green-leaf: #5D9E5F;
-    /* Verde folha natural */
-    --green-olive: #6B8E23;
-    /* Verde oliva */
-    --green-forest: #228B22;
-    /* Verde floresta */
-
-    /* Neutros essenciais */
-    --white: #FFFFFF;
-    --gray-light: #F5F5F5;
-    --gray-medium: #9E9E9E;
-    --gray-dark: #424242;
-    --light-bg: #F1F8E9;
-    --dark-text: #263238;
-
-    /* Sombras simplificadas */
-    --shadow-light: 0 2px 8px rgba(76, 175, 80, 0.1);
-    --shadow-medium: 0 4px 12px rgba(76, 175, 80, 0.15);
-
-    /* Efeitos básicos */
-    --border-radius: 8px;
-    --transition: all 0.25s ease;
+  --green-primary: #198754;
+  --green-leaf: #5d9e5f;
 }
 
+/* Reset básico */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    /* Já vem no Bootstrap, mas reforça */
+  box-sizing: border-box;
 }
 
-/* Remove margens padrão e define fonte base */
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-        'Helvetica Neue', Arial, sans-serif;
-    /* Similar ao Bootstrap */
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
-/* Garante que imagens não ultrapassem containers */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Remove estilos padrão de listas */
-ul,
-ol {
-    padding-left: 0;
-    list-style: none;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* Reset básico para links */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Reset para elementos de formulário */
-button,
-input,
-optgroup,
-select,
-textarea {
-    font-family: inherit;
-    margin: 0;
-}
-
-/* Remove o outline padrão mas mantém acessibilidade */
-:focus:not(:focus-visible) {
-    outline: none;
-}
-
-/* ============================================= */
-/*               Menu de Navegação          */
-/* ============================================= */
-
-/*               Menu de Navegação               */
-/* ============================================= */
-
-/* LOGO */
-.logo-img {
-    height: 60px;
-    transition: transform 0.3s ease;
-}
-
-.logo-img:hover {
-    transform: scale(1.03);
-}
-
-/* NAVBAR */
+/* Navbar customizada */
 .custom-navbar {
-    background-color: var(--green-primary);
-    box-shadow: var(--shadow-medium);
+  background-color: var(--green-primary);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.15);
+}
+.logo-img {
+  height: 60px;      /* Altura fixa */
+  width: auto;       /* Largura proporcional */
+  max-width: 100%;   /* Não ultrapassa o container */
+  transition: transform 0.3s ease;
 }
 
-/* LINKS */
 .custom-navbar .nav-link {
-    color: var(--white);
-    font-weight: 500;
-    font-size: 1.15rem;
-    /* Levemente maior */
-    padding: 14px 20px;
-    transition: var(--transition);
-    border-radius: var(--border-radius);
-    position: relative;
+  color: white;
+  font-weight: 500;
+  font-size: 1.15rem;
+  padding: 14px 20px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
 }
 
-/* Hover elegante - leve brilho + fundo suave */
 .custom-navbar .nav-link:hover,
 .custom-navbar .nav-link:focus {
-    background-color: rgba(255, 255, 255, 0.08);
-    color: var(--white);
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
 }
 
-/* Active */
 .custom-navbar .nav-link.active {
-    background-color: rgba(255, 255, 255, 0.15);
-    font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
 }
 
-/* TOGGLER ICON */
-
+/* Botão hamburguer personalizado */
 .navbar-toggler {
-    border: none;
-    background: transparent;
-    padding: 0;
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active {
-    outline: none;
-    box-shadow: none;
+  border: none;
+  background: transparent;
+  padding: 0;
 }
 
 .icon-bar {
-    width: 22px;
-    height: 2px;
-    background-color: white;
-    display: block;
-    transition: all 0.3s ease;
-    margin-top: 4px;
+  width: 22px;
+  height: 2px;
+  background-color: white;
+  display: block;
+  margin-top: 4px;
+  transition: all 0.3s ease;
 }
 
-/* Efeito do X quando ABERTO (sem collapsed) */
 .navbar-toggler:not(.collapsed) .top-bar {
-    transform: rotate(45deg);
-    transform-origin: 10% 10%;
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
 }
 
 .navbar-toggler:not(.collapsed) .middle-bar {
-    opacity: 0;
+  opacity: 0;
 }
 
 .navbar-toggler:not(.collapsed) .bottom-bar {
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
 }
 
-/* Reset para quando FECHADO */
-.navbar-toggler.collapsed .top-bar {
-    transform: rotate(0);
-}
-
-.navbar-toggler.collapsed .middle-bar {
-    opacity: 1;
-}
-
-.navbar-toggler.collapsed .bottom-bar {
-    transform: rotate(0);
-}
-
-/* ============================================= */
-/*               Section Hero        */
-/* ============================================= */
+/* Hero Section */
 .hero-section {
-  position: relative;
-  background: var(--white); /* Exemplo de fundo suave */
-  color:var(--green-forest);
-  overflow: hidden;
+  position: relative; /* importante para posicionamento absoluto do botão */
+  background: var(--white);
+
 }
 
 .hero-overlay {
@@ -218,29 +113,14 @@ textarea {
   font-size: 1.125rem;
 }
 
-.scroll-indicator {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.5rem;
-  animation: bounce 2s infinite;
-  z-index: 3;
-}
-
-/* Efeito bounce do scroll-indicator */
-@keyframes bounce {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, -10px); }
-}
-
-/* Animação de flutuação na imagem */
+/* Animação imagem flutuante */
 .floating-img {
   animation: floatY 4s ease-in-out infinite;
 }
 
 @keyframes floatY {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -248,25 +128,87 @@ textarea {
   }
 }
 
-/* Responsivo: garantir que os botões fiquem bonitos */
+/* Garante que o botão descer está relativo à hero-section */
+.hero-section {
+  position: relative; /* se já tiver, tudo certo */
+}
+
+/* Botão descer centralizado na base */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--green-primary);
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s ease;
+}
+
+/* Ajuste para telas pequenas para subir o botão e evitar sobreposição */
+@media (max-width: 767.98px) {
+  .scroll-indicator {
+    bottom: 60px; /* sobe o botão para não ficar sobre a imagem */
+    font-size: 2rem;
+  }
+}
+
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* botão no canto direito */
+  display: none; /* oculto por padrão */
+  width: 48px;    /* largura fixa */
+  height: 48px;   /* altura fixa igual para ser círculo */
+  background-color: var(--green-primary);
+  color: white;
+  border: none;
+  border-radius: 50%; /* deixa circular */
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+
+  display: flex;              /* flex para centralizar */
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: var(--green-leaf);
+  transform: scale(1.1);
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 576px) {
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+
+/* Responsividade */
 @media (max-width: 767.98px) {
   .hero-title {
     font-size: 2rem;
   }
+
   .hero-subtitle {
     font-size: 1rem;
   }
 }
 
-
-
-/* ============================================= */
-/*               Responsividade        */
-/* ============================================= */
-
 @media (min-width: 992px) {
-    .custom-navbar .nav-link {
-        font-size: 1.2rem;
-        padding: 16px 24px;
-    }
+  .custom-navbar .nav-link {
+    font-size: 1.2rem;
+    padding: 16px 24px;
+  }
 }
