@@ -2,6 +2,7 @@
 :root {
     --green-primary: #198754;
     --green-leaf: #5d9e5f;
+    --green-black:#0d4430;
     --white-primary: #f8f9f7;
     --black-primary: #050606;
 }
@@ -80,6 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     margin: 0 0 1rem 0;
+    color:var(--black-primary);
 }
 
 table {
@@ -240,6 +242,16 @@ section {
 .hero-subtitle {
     font-size: 1.125rem;
 }
+.floating-image-wrapper img.floating-img {
+  border-radius:50px 10px 40px; /* valores complexos pra shape estiloso */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* sombra leve e elegante */  
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+}
+
 
 /* Animação imagem flutuante */
 .floating-img {
