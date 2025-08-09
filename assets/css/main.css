@@ -214,6 +214,35 @@ section {
 
 
 /* Hero Section */
+#home {
+  position: relative;
+  overflow: hidden;
+  background-color: #f9fdf9;
+  background-image:
+    radial-gradient(circle at 5% 15%, rgba(34, 139, 34, 0.12) 18%, transparent 70%),
+    radial-gradient(circle at 20% 25%, rgba(50, 205, 50, 0.10) 22%, transparent 70%),
+    radial-gradient(circle at 35% 10%, rgba(46, 139, 87, 0.10) 28%, transparent 75%),
+    radial-gradient(circle at 50% 20%, rgba(34, 139, 34, 0.11) 25%, transparent 70%),
+    radial-gradient(circle at 65% 35%, rgba(60, 179, 113, 0.12) 20%, transparent 70%),
+    radial-gradient(circle at 80% 25%, rgba(50, 205, 50, 0.09) 25%, transparent 75%),
+    radial-gradient(circle at 90% 10%, rgba(34, 139, 34, 0.08) 22%, transparent 70%),
+    radial-gradient(circle at 10% 50%, rgba(46, 139, 87, 0.10) 30%, transparent 75%),
+    radial-gradient(circle at 25% 65%, rgba(50, 205, 50, 0.11) 22%, transparent 70%),
+    radial-gradient(circle at 40% 70%, rgba(34, 139, 34, 0.09) 27%, transparent 75%),
+    radial-gradient(circle at 55% 60%, rgba(60, 179, 113, 0.10) 25%, transparent 70%),
+    radial-gradient(circle at 70% 65%, rgba(46, 139, 87, 0.12) 20%, transparent 75%),
+    radial-gradient(circle at 85% 55%, rgba(50, 205, 50, 0.10) 25%, transparent 70%),
+    radial-gradient(circle at 95% 50%, rgba(34, 139, 34, 0.11) 20%, transparent 75%);
+  background-repeat: no-repeat;
+  background-size:
+    28% 28%, 24% 24%, 30% 30%, 26% 26%, 22% 22%, 24% 24%, 22% 22%,
+    30% 30%, 24% 24%, 28% 28%, 26% 26%, 22% 22%, 24% 24%, 20% 20%;
+  background-position:
+    5% 15%, 20% 25%, 35% 10%, 50% 20%, 65% 35%, 80% 25%, 90% 10%,
+    10% 50%, 25% 65%, 40% 70%, 55% 60%, 70% 65%, 85% 55%, 95% 50%;
+}
+
+
 .hero-section {
     position: relative;
     background: var(--white);

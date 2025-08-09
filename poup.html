@@ -1,0 +1,124 @@
+    <!-- Popup de Matrícula -->
+    <div id="matricula-popup"
+        style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:9999; display:flex; justify-content:center; align-items:center;">
+
+        <div id="popup-card"
+            style="background:#fff; border-radius:15px; max-width:500px; width:90%; box-shadow:0 4px 15px rgba(0,0,0,0.3); overflow:hidden; font-family: Arial, sans-serif; position: relative;">
+
+            <!-- Botão fechar X no canto superior direito -->
+            <button id="btn-close" aria-label="Fechar popup" style="
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: transparent;
+      border: none;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffffff;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0;
+      width: 42px;
+      height: 492px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s ease;
+    ">×</button>
+
+            <img src="assets/img/04.jpeg"
+                alt="Matrícula"
+                style="width:100%; height:auto; display:block; border-top-left-radius:15px; border-top-right-radius:15px;">
+
+            <div style="padding: 25px 20px; text-align:center;">
+                <h2 style="color: #28a745; margin-bottom: 12px; font-size: 1.9rem;">Matrículas 2026</h2>
+                <p style="margin-bottom: 22px; font-size: 1.1rem; color:#333;">Garanta a vaga do seu filho! Vagas
+                    limitadas para o próximo ano.</p>
+                <button id="btn-whatsapp" style="
+        background:#28a745; 
+        color:#fff; 
+        border:none; 
+        padding:14px 28px; 
+        font-size:1.2rem; 
+        border-radius:8px; 
+        cursor:pointer; 
+        width:100%; 
+        max-width:320px;
+        transition: background-color 0.3s ease;
+      ">Fazer Agora</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const popup = document.getElementById('matricula-popup');
+        const btnWhats = document.getElementById('btn-whatsapp');
+        const btnClose = document.getElementById('btn-close');
+        const STORAGE_KEY = 'matriculaFechadaPopup';
+
+        // Mostrar popup se não tiver sido fechado nessa sessão
+        if (!sessionStorage.getItem(STORAGE_KEY)) {
+            popup.style.display = 'flex';
+        }
+
+        btnWhats.onclick = () => {
+            window.open('https://wa.me/5599999999999?text=Olá,%20quero%20saber%20sobre%20as%20matrículas%20para%202026', '_blank');
+            popup.style.display = 'none';
+            sessionStorage.setItem(STORAGE_KEY, 'true');
+        };
+
+        btnClose.onclick = () => {
+            popup.style.display = 'none';
+            sessionStorage.setItem(STORAGE_KEY, 'true');
+        };
+    </script>
+
+    <style>
+        /* Hover no X fechar */
+        #btn-close:hover {
+            color: #28a745;
+        }
+
+        /* Responsividade suave */
+        @media (max-width: 600px) {
+            #popup-card {
+                max-width: 90%;
+            }
+
+            #popup-card h2 {
+                font-size: 1.6rem !important;
+            }
+
+            #popup-card p {
+                font-size: 1rem !important;
+            }
+
+            #btn-whatsapp {
+                font-size: 1rem !important;
+                padding: 12px 24px !important;
+                max-width: 100% !important;
+            }
+        }
+
+        @media (min-width: 900px) {
+            #popup-card {
+                max-width: 600px;
+                padding: 0;
+                /* padding só dentro do div do conteúdo */
+            }
+
+            #popup-card h2 {
+                font-size: 2.3rem !important;
+            }
+
+            #popup-card p {
+                font-size: 1.3rem !important;
+            }
+
+            #btn-whatsapp {
+                font-size: 1.4rem !important;
+                padding: 16px 36px !important;
+                max-width: 320px !important;
+            }
+        }
+    </style>

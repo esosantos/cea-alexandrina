@@ -1,0 +1,141 @@
+/* popup.css */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup-card {
+  background: #fff;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+#btn-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+#btn-close:hover {
+  color: #28a745;
+}
+
+#popup-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.popup-content {
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.popup-content h2 {
+  color: #28a745;
+  margin-bottom: 12px;
+  font-size: 1.9rem;
+}
+
+.popup-content p {
+  margin-bottom: 22px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#btn-whatsapp {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 320px;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  #popup-card {
+    max-width: 90%;
+  }
+
+  .popup-content h2 {
+    font-size: 1.6rem !important;
+  }
+
+  .popup-content p {
+    font-size: 1rem !important;
+  }
+
+  #btn-whatsapp {
+    font-size: 1rem !important;
+    padding: 12px 24px !important;
+    max-width: 100% !important;
+  }
+
+  #btn-close {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 2rem !important;
+    top: 10px !important;
+    right: 10px !important;
+  }
+}
+
+@media (min-width: 900px) {
+  #popup-card {
+    max-width: 600px;
+    padding: 0;
+  }
+
+  .popup-content h2 {
+    font-size: 2.3rem !important;
+  }
+
+  .popup-content p {
+    font-size: 1.3rem !important;
+  }
+
+  #btn-whatsapp {
+    font-size: 1.4rem !important;
+    padding: 16px 36px !important;
+    max-width: 320px !important;
+  }
+
+  #btn-close {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 2.8rem !important;
+    top: 15px !important;
+    right: 15px !important;
+  }
+}

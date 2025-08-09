@@ -1,0 +1,76 @@
+    <!-- Modal -->
+<div id="matricula-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1050; display:flex; justify-content:center; align-items:center;">
+  <div id="modal-content" style="background:#fff; padding:30px 20px; border-radius:15px; max-width:600px; width:90%; max-height:90vh; overflow-y:auto; text-align:center; box-sizing:border-box;">
+    <h2 style="color:green; margin-bottom:15px; font-size:2rem;">Matrículas 2026</h2>
+    <p style="font-size:1.1rem; margin-bottom:20px;">Vagas abertas! Garanta um futuro brilhante para seu filho.</p>
+    <button id="btn-fazer-agora" style="padding:12px 25px; font-size:1.2rem; background:green; color:#fff; border:none; border-radius:8px; cursor:pointer; width:100%; max-width:300px;">Fazer Agora</button>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('matricula-modal');
+  const btn = document.getElementById('btn-fazer-agora');
+  const STORAGE_KEY = 'matriculaFechadaTimestamp';
+
+  // Função que verifica se já passou 1 dia desde o último fechamento
+  function podeMostrarModal() {
+    const ts = localStorage.getItem(STORAGE_KEY);
+    if(!ts) return true; // Nunca fechou, mostrar modal
+
+    const ultimoFechamento = parseInt(ts, 10);
+    const agora = Date.now();
+    const umDiaMs = 24 * 60 * 60 * 1000;
+
+    return (agora - ultimoFechamento) > umDiaMs; // true se passou 1 dia
+  }
+
+  // Mostrar modal só se permitido
+  if(podeMostrarModal()) {
+    modal.style.display = 'flex';
+  }
+
+  btn.onclick = () => {
+    window.open('https://wa.me/5599999999999?text=Olá,%20quero%20saber%20sobre%20as%20matrículas%20para%202026', '_blank');
+    modal.style.display = 'none';
+    localStorage.setItem(STORAGE_KEY, Date.now().toString());
+  };
+</script>
+
+<style>
+  /* Responsividade básica */
+  @media (max-width: 600px) {
+    #modal-content {
+      padding: 20px 15px;
+      max-width: 95%;
+    }
+    #modal-content h2 {
+      font-size: 1.6rem !important;
+    }
+    #modal-content p {
+      font-size: 1rem !important;
+    }
+    #btn-fazer-agora {
+      font-size: 1rem !important;
+      padding: 10px 20px !important;
+      max-width: 100% !important;
+    }
+  }
+
+  @media (min-width: 900px) {
+    #modal-content {
+      max-width: 700px;
+      padding: 40px 30px;
+    }
+    #modal-content h2 {
+      font-size: 2.5rem !important;
+    }
+    #modal-content p {
+      font-size: 1.2rem !important;
+    }
+    #btn-fazer-agora {
+      font-size: 1.4rem !important;
+      padding: 14px 30px !important;
+      max-width: 320px !important;
+    }
+  }
+</style>

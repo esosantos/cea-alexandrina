@@ -50,7 +50,7 @@
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="row align-items-center min-vh-100 py-5">
-                <div class="col-lg-6 text-dark text-center text-lg-start">
+                <div class="col-lg-7 text-dark text-center text-lg-start">
                     <div class="hero-content">
                         <h1 class="hero-title fw-bold mb-4">
                             <span class="d-block display-5 fw-bold text-success">Desde 1992</span>
@@ -60,21 +60,22 @@
                         </h1>
 
                         <p class="hero-subtitle mb-4">
-                            Nossa escola é o alicerce onde o conhecimento floresce e mentes brilhantes<br> se preparam para
+                            Nossa escola é o alicerce onde o conhecimento floresce e mentes brilhantes<br> se preparam
+                            para
                             uma jornada de
                             sucesso.
                         </p>
 
                         <div class="d-flex flex-column flex-md-row gap-3">
-                            <a href="#programas" class="btn btn-success btn-lg w-100 w-md-auto">Conheça Nossos
+                            <a href="#programas" class="btn btn-success btn-lg w-100 w-md-auto">Nossos
                                 Programas</a>
-                            <a href="#contato" class="btn btn-outline-success btn-lg w-100 w-md-auto">Agende uma
+                            <a href="#contato" class="btn btn-outline-success btn-lg w-100 w-md-auto">Agendar 
                                 Visita</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                <div class="col-lg-5 text-center mt-5 mt-lg-0">
                     <div class="floating-image-wrapper mx-auto">
                         <img src="assets/img/alexandrina.png" alt="Estudantes felizes"
                             class="img-fluid shadow floating-img " />
@@ -90,6 +91,130 @@
         </a>
     </section>
 
+    <!-- Popup de Matrícula -->
+    <div id="matricula-popup"
+        style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:9999; display:flex; justify-content:center; align-items:center;">
+
+        <div id="popup-card"
+            style="background:#fff; border-radius:15px; max-width:500px; width:90%; box-shadow:0 4px 15px rgba(0,0,0,0.3); overflow:hidden; font-family: Arial, sans-serif; position: relative;">
+
+            <!-- Botão fechar X no canto superior direito -->
+            <button id="btn-close" aria-label="Fechar popup" style="
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: transparent;
+      border: none;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffffff;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s ease;
+    ">×</button>
+
+            <img src="assets/img/04.jpeg"
+                alt="Matrícula"
+                style="width:100%; height:auto; display:block; border-top-left-radius:15px; border-top-right-radius:15px;">
+
+            <div style="padding: 25px 20px; text-align:center;">
+                <h2 style="color: #28a745; margin-bottom: 12px; font-size: 1.9rem;">Matrículas 2026</h2>
+                <p style="margin-bottom: 22px; font-size: 1.1rem; color:#333;">Garanta a vaga do seu filho! Vagas
+                    limitadas para o próximo ano.</p>
+                <button id="btn-whatsapp" style="
+        background:#28a745; 
+        color:#fff; 
+        border:none; 
+        padding:14px 28px; 
+        font-size:1.2rem; 
+        border-radius:8px; 
+        cursor:pointer; 
+        width:100%; 
+        max-width:320px;
+        transition: background-color 0.3s ease;
+      ">Matricule Agora!</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const popup = document.getElementById('matricula-popup');
+        const btnWhats = document.getElementById('btn-whatsapp');
+        const btnClose = document.getElementById('btn-close');
+        const STORAGE_KEY = 'matriculaFechadaPopup';
+
+        // Mostrar popup se não tiver sido fechado nessa sessão
+        if (!sessionStorage.getItem(STORAGE_KEY)) {
+            popup.style.display = 'flex';
+        }
+
+        btnWhats.onclick = () => {
+            window.open('https://wa.me/5599999999999?text=Olá,%20quero%20saber%20sobre%20as%20matrículas%20para%202026', '_blank');
+            popup.style.display = 'none';
+            sessionStorage.setItem(STORAGE_KEY, 'true');
+        };
+
+        btnClose.onclick = () => {
+            popup.style.display = 'none';
+            sessionStorage.setItem(STORAGE_KEY, 'true');
+        };
+    </script>
+
+    <style>
+        /* Hover no X fechar */
+        #btn-close:hover {
+            color: #28a745;
+        }
+
+        /* Responsividade suave */
+        @media (max-width: 600px) {
+            #popup-card {
+                max-width: 90%;
+            }
+
+            #popup-card h2 {
+                font-size: 1.6rem !important;
+            }
+
+            #popup-card p {
+                font-size: 1rem !important;
+            }
+
+            #btn-whatsapp {
+                font-size: 1rem !important;
+                padding: 12px 24px !important;
+                max-width: 100% !important;
+            }
+        }
+
+        @media (min-width: 900px) {
+            #popup-card {
+                max-width: 600px;
+                padding: 0;
+                /* padding só dentro do div do conteúdo */
+            }
+
+            #popup-card h2 {
+                font-size: 2.3rem !important;
+            }
+
+            #popup-card p {
+                font-size: 1.3rem !important;
+            }
+
+            #btn-whatsapp {
+                font-size: 1.4rem !important;
+                padding: 16px 36px !important;
+                max-width: 320px !important;
+            }
+        }
+    </style>
 
     <!-- About Section -->
     <section class="sobre-alexandrina" id="sobre">
@@ -273,7 +398,8 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="footer-brand">
                         <h5><i class="fas fa-graduation-cap me-2"></i>Centro Educacional Alexandrina</h5>
-                        <p class="footer-text pt-2 text-white">Um futuro brilhante para nossas<br> crianças e adolescentes!</p>
+                        <p class="footer-text pt-2 text-white">Um futuro brilhante para nossas<br> crianças e
+                            adolescentes!</p>
                     </div>
                 </div>
 
@@ -305,7 +431,8 @@
                 <div class="col-lg-4 col-md-12 mb-4">
                     <h5 class="footer-title">Contato</h5>
                     <div class="footer-contact">
-                        <p class="text-white"><i class="fas fa-map-marker-alt me-2 text-white"></i>Rua Wenceslau Galo, 27
+                        <p class="text-white"><i class="fas fa-map-marker-alt me-2 text-white"></i>Rua Wenceslau Galo,
+                            27
                             Comes de Farias - Salvador - BA</p>
                         <p class="text-white"><i class="fas fa-phone me-2"></i>(71)3382-7359/99164-5847</p>
                         <p class="text-white"><i class="fas fa-envelope me-2"></i>cealexandrina@hotmail.com</p>
@@ -323,11 +450,13 @@
 
             <div class="row">
                 <div class="col-md-6">
-                    <p class="footer-copyright text-white">© 1992-<span id="current-year">2025</span> CEA- Centro Educacional
+                    <p class="footer-copyright text-white">© 1992-<span id="current-year">2025</span> CEA- Centro
+                        Educacional
                         Alexandrina. Todos os direitos reservados.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="footer-credits text-white">Educação feita de <i class="fas fa-heart text-danger"></i> e com muito
+                    <p class="footer-credits text-white">Educação feita de <i class="fas fa-heart text-danger"></i> e
+                        com muito
                         amor.</p>
                 </div>
             </div>
