@@ -271,30 +271,46 @@ section {
 .hero-subtitle {
     font-size: 1.125rem;
 }
-.floating-image-wrapper img.floating-img {
-  border-radius:50px 10px 40px; /* valores complexos pra shape estiloso */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* sombra leve e elegante */  
-  max-width: 100%;
-  height: auto;
+.floating-image-wrapper img {
+  border-radius: 15px;
+  border: 4px solid #d9f0d9; /* borda clara que combina com fundo */
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.3),    /* sombra interna direita e baixo */
+    inset -4px -4px 8px rgba(255, 255, 255, 0.8); /* luz interna esquerda e cima */
+  background-color: #e6f2e6; /* tom suave para reforçar o efeito */
   display: block;
-  margin: 0 auto;
-
+  max-width: 100%;
+  transition: box-shadow 0.3s ease;
+}
+.shape {
+    position: relative;
+    overflow: hidden;
 }
 
-
-/* Animação imagem flutuante */
-.floating-img {
-    animation: floatY 4s ease-in-out infinite;
+.shape img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-@keyframes floatY {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+/* Estilos dos textos */
+.shape .label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
+
+/* Bordas arredondadas assimétricas */
+.shape1 { border-radius: 100% 10% 10% 10% ; }
+.shape2 { border-radius: 10% 100% 10% 10%  }
+.shape3 { border-radius: 10% 10% 10% 100%; }
+.shape4 { border-radius: 10% 10% 100% 10% ; }
+
+
 
 /* Botão descer */
 .scroll-indicator {
