@@ -1,8 +1,12 @@
+/*Google Fonte **/
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&display=swap');
+
+
 /* Variáveis de cores */
 :root {
     --green-primary: #198754;
     --green-leaf: #5d9e5f;
-    --green-black:#0d4430;
+    --green-black: #0d4430;
     --white-primary: #f8f9f7;
     --black-primary: #050606;
 }
@@ -73,7 +77,12 @@ body {
 /* ============================================= */
 /*        RESET E AJUSTES PARA BOOTSTRAP         */
 /* ============================================= */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     font-weight: 600;
     line-height: 1.2;
@@ -81,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     margin: 0 0 1rem 0;
-    color:var(--black-primary);
+    color: var(--black-primary);
 }
 
 table {
@@ -121,6 +130,7 @@ textarea {
 .btn:active {
     box-shadow: none !important;
 }
+
 .btn-close:focus {
     outline: none;
     box-shadow: none;
@@ -207,6 +217,7 @@ section {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
 }
+
 .navbar-toggler:focus {
     outline: none !important;
     box-shadow: none !important;
@@ -215,31 +226,31 @@ section {
 
 /* Hero Section */
 #home {
-  position: relative;
-  overflow: hidden;
-  background-color: #f9fdf9;
-  background-image:
-    radial-gradient(circle at 5% 15%, rgba(34, 139, 34, 0.12) 18%, transparent 70%),
-    radial-gradient(circle at 20% 25%, rgba(50, 205, 50, 0.10) 22%, transparent 70%),
-    radial-gradient(circle at 35% 10%, rgba(46, 139, 87, 0.10) 28%, transparent 75%),
-    radial-gradient(circle at 50% 20%, rgba(34, 139, 34, 0.11) 25%, transparent 70%),
-    radial-gradient(circle at 65% 35%, rgba(60, 179, 113, 0.12) 20%, transparent 70%),
-    radial-gradient(circle at 80% 25%, rgba(50, 205, 50, 0.09) 25%, transparent 75%),
-    radial-gradient(circle at 90% 10%, rgba(34, 139, 34, 0.08) 22%, transparent 70%),
-    radial-gradient(circle at 10% 50%, rgba(46, 139, 87, 0.10) 30%, transparent 75%),
-    radial-gradient(circle at 25% 65%, rgba(50, 205, 50, 0.11) 22%, transparent 70%),
-    radial-gradient(circle at 40% 70%, rgba(34, 139, 34, 0.09) 27%, transparent 75%),
-    radial-gradient(circle at 55% 60%, rgba(60, 179, 113, 0.10) 25%, transparent 70%),
-    radial-gradient(circle at 70% 65%, rgba(46, 139, 87, 0.12) 20%, transparent 75%),
-    radial-gradient(circle at 85% 55%, rgba(50, 205, 50, 0.10) 25%, transparent 70%),
-    radial-gradient(circle at 95% 50%, rgba(34, 139, 34, 0.11) 20%, transparent 75%);
-  background-repeat: no-repeat;
-  background-size:
-    28% 28%, 24% 24%, 30% 30%, 26% 26%, 22% 22%, 24% 24%, 22% 22%,
-    30% 30%, 24% 24%, 28% 28%, 26% 26%, 22% 22%, 24% 24%, 20% 20%;
-  background-position:
-    5% 15%, 20% 25%, 35% 10%, 50% 20%, 65% 35%, 80% 25%, 90% 10%,
-    10% 50%, 25% 65%, 40% 70%, 55% 60%, 70% 65%, 85% 55%, 95% 50%;
+    position: relative;
+    overflow: hidden;
+    background-color: #f9fdf9;
+    background-image:
+        radial-gradient(circle at 5% 15%, rgba(34, 139, 34, 0.12) 18%, transparent 70%),
+        radial-gradient(circle at 20% 25%, rgba(50, 205, 50, 0.10) 22%, transparent 70%),
+        radial-gradient(circle at 35% 10%, rgba(46, 139, 87, 0.10) 28%, transparent 75%),
+        radial-gradient(circle at 50% 20%, rgba(34, 139, 34, 0.11) 25%, transparent 70%),
+        radial-gradient(circle at 65% 35%, rgba(60, 179, 113, 0.12) 20%, transparent 70%),
+        radial-gradient(circle at 80% 25%, rgba(50, 205, 50, 0.09) 25%, transparent 75%),
+        radial-gradient(circle at 90% 10%, rgba(34, 139, 34, 0.08) 22%, transparent 70%),
+        radial-gradient(circle at 10% 50%, rgba(46, 139, 87, 0.10) 30%, transparent 75%),
+        radial-gradient(circle at 25% 65%, rgba(50, 205, 50, 0.11) 22%, transparent 70%),
+        radial-gradient(circle at 40% 70%, rgba(34, 139, 34, 0.09) 27%, transparent 75%),
+        radial-gradient(circle at 55% 60%, rgba(60, 179, 113, 0.10) 25%, transparent 70%),
+        radial-gradient(circle at 70% 65%, rgba(46, 139, 87, 0.12) 20%, transparent 75%),
+        radial-gradient(circle at 85% 55%, rgba(50, 205, 50, 0.10) 25%, transparent 70%),
+        radial-gradient(circle at 95% 50%, rgba(34, 139, 34, 0.11) 20%, transparent 75%);
+    background-repeat: no-repeat;
+    background-size:
+        28% 28%, 24% 24%, 30% 30%, 26% 26%, 22% 22%, 24% 24%, 22% 22%,
+        30% 30%, 24% 24%, 28% 28%, 26% 26%, 22% 22%, 24% 24%, 20% 20%;
+    background-position:
+        5% 15%, 20% 25%, 35% 10%, 50% 20%, 65% 35%, 80% 25%, 90% 10%,
+        10% 50%, 25% 65%, 40% 70%, 55% 60%, 70% 65%, 85% 55%, 95% 50%;
 }
 
 
@@ -271,17 +282,23 @@ section {
 .hero-subtitle {
     font-size: 1.125rem;
 }
+
 .floating-image-wrapper img {
-  border-radius: 15px;
-  border: 4px solid #d9f0d9; /* borda clara que combina com fundo */
-  box-shadow:
-    inset 4px 4px 8px rgba(0, 0, 0, 0.3),    /* sombra interna direita e baixo */
-    inset -4px -4px 8px rgba(255, 255, 255, 0.8); /* luz interna esquerda e cima */
-  background-color: #e6f2e6; /* tom suave para reforçar o efeito */
-  display: block;
-  max-width: 100%;
-  transition: box-shadow 0.3s ease;
+    border-radius: 15px;
+    border: 4px solid #d9f0d9;
+    /* borda clara que combina com fundo */
+    box-shadow:
+        inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+        /* sombra interna direita e baixo */
+        inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+    /* luz interna esquerda e cima */
+    background-color: #e6f2e6;
+    /* tom suave para reforçar o efeito */
+    display: block;
+    max-width: 100%;
+    transition: box-shadow 0.3s ease;
 }
+
 .shape {
     position: relative;
     overflow: hidden;
@@ -305,10 +322,21 @@ section {
 }
 
 /* Bordas arredondadas assimétricas */
-.shape1 { border-radius: 100% 10% 10% 10% ; }
-.shape2 { border-radius: 10% 100% 10% 10%  }
-.shape3 { border-radius: 10% 10% 10% 100%; }
-.shape4 { border-radius: 10% 10% 100% 10% ; }
+.shape1 {
+    border-radius: 100% 10% 10% 10%;
+}
+
+.shape2 {
+    border-radius: 10% 100% 10% 10%
+}
+
+.shape3 {
+    border-radius: 10% 10% 10% 100%;
+}
+
+.shape4 {
+    border-radius: 10% 10% 100% 10%;
+}
 
 
 
@@ -425,6 +453,7 @@ section {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     font-weight: 600;
+    
     position: relative;
     padding-bottom: 10px;
 }
@@ -441,6 +470,7 @@ section {
 
 .content-paragraphs p {
     font-size: 1.1rem;
+    font-family: "Playwrite MX Guides", cursive;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     text-align: justify;
@@ -449,19 +479,21 @@ section {
 
 /* Section Programas */
 #programas {
-    background-color:  #e5e5e5; 
+    background-color: #e5e5e5;
 }
 
 /* Título principal */
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1a7c4d; /* Verde institucional */
+    color: #1a7c4d;
+    /* Verde institucional */
     margin-bottom: 0.5rem;
 }
 
 .section-title .text-primary {
-    color: #198754 !important; /* Verde Bootstrap */
+    color: #198754 !important;
+    /* Verde Bootstrap */
 }
 
 /* Subtítulo */
@@ -543,6 +575,7 @@ section {
     font-size: 1rem;
     margin-right: 0.5rem;
 }
+
 /* ============================================= */
 /*             SEÇÃO DIFERENCIAIS                */
 /* ============================================= */
@@ -675,15 +708,15 @@ section {
     .section-title {
         font-size: 2.2rem;
     }
-    
+
     .section-subtitle {
         font-size: 1.1rem;
     }
-    
+
     .feature-card {
         padding: 1.8rem;
     }
-    
+
     .feature-icon {
         width: 60px;
         height: 60px;
@@ -695,11 +728,11 @@ section {
     .section-title {
         font-size: 2rem;
     }
-    
+
     .feature-title {
         font-size: 1.3rem;
     }
-    
+
     .feature-text {
         font-size: 0.95rem;
     }
@@ -709,21 +742,22 @@ section {
     #diferenciais {
         padding: 3rem 0;
     }
-    
+
     .section-title {
         font-size: 1.8rem;
     }
-    
+
     .feature-card {
         padding: 1.5rem;
     }
-    
+
     .feature-icon {
         width: 50px;
         height: 50px;
         font-size: 1.3rem;
     }
 }
+
 /* ============================================= */
 /*                 FOOTER ESTILO                 */
 /* ============================================= */
@@ -882,19 +916,23 @@ section {
 
 /* Cores específicas para cada rede social */
 .social-link:nth-child(1)::before {
-    background: #3b5999; /* Facebook */
+    background: #3b5999;
+    /* Facebook */
 }
 
 .social-link:nth-child(2)::before {
-    background: #E1306C; /* Instagram */
+    background: #E1306C;
+    /* Instagram */
 }
 
 .social-link:nth-child(3)::before {
-    background: #FF0000; /* YouTube */
+    background: #FF0000;
+    /* YouTube */
 }
 
 .social-link:nth-child(4)::before {
-    background: #0077b5; /* LinkedIn */
+    background: #0077b5;
+    /* LinkedIn */
 }
 
 /* Responsividade */
@@ -902,7 +940,7 @@ section {
     .social-links {
         justify-content: center;
     }
-    
+
     .social-link {
         width: 45px;
         height: 45px;
@@ -926,7 +964,8 @@ section {
     margin: 2rem 0;
 }
 
-.footer-copyright, .footer-credits {
+.footer-copyright,
+.footer-credits {
     opacity: 0.8;
     font-size: 0.9rem;
     margin-bottom: 0;
@@ -942,9 +981,17 @@ section {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Responsividade */
@@ -952,12 +999,13 @@ section {
     .footer-brand h4 {
         font-size: 1.3rem;
     }
-    
+
     .footer-title {
         font-size: 1.1rem;
     }
-    
-    .footer-contact p, .footer-links a {
+
+    .footer-contact p,
+    .footer-links a {
         font-size: 0.95rem;
     }
 }
@@ -966,29 +1014,30 @@ section {
     .footer {
         text-align: center;
     }
-    
+
     .footer-title::after {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .footer-links {
         margin-bottom: 2rem;
     }
-    
+
     .social-links {
         justify-content: center;
     }
-    
+
     .footer-contact p {
         justify-content: center;
     }
-    
-    .footer-copyright, .footer-credits {
+
+    .footer-copyright,
+    .footer-credits {
         text-align: center !important;
         margin-top: 1rem;
     }
-    
+
     .footer-brand h4 {
         justify-content: center;
     }
